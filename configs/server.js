@@ -4,7 +4,11 @@ import express from "express"
 import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
+import { hash } from "argon2"
 import { dbConnection } from "./mongo.js"
+import authRoutes from "../src/auth/auth.routes.js"
+import adminRoutes from "../src/admin/admin.routes.js"
+import Admin from "../src/admin/admin.model.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -12,6 +16,11 @@ const middlewares = (app) => {
     app.use(cors())
     app.use(helmet())
     app.use(morgan("dev"))
+}
+
+const routes = (app) =>{
+    app.use("/GestionESDB-2023292/v1/auth", authRoutes)
+    app.use("/GestionESDB-2023292/v1/admin", adminRoutes)
 }
 
 const conectarDB = async () =>{
@@ -28,9 +37,37 @@ export const initServer = () => {
     try{
         middlewares(app)
         conectarDB()
+        routes(app)
         app.listen(process.env.PORT)
         console.log(`Server running on port ${process.env.PORT}`)
+        createAdmins()
     }catch(err){
         console.log(`Server init failed: ${err}`)
+    }
+}
+
+const createAdmins = async() => {
+    try {
+        const adminExists = await Admin.findOne({ role: "ADMIN" })
+        
+        if (!adminExists) {
+            const encryptedPassword = await hash("q1w2E@3004")
+            
+            const newAdmin = new Admin({
+                name: "Fernando Emanuel",
+                surname: "Morente Lopez",
+                username: "adminOne",
+                email: "fmorente@gmail.com",
+                phone: "45789632",
+                password: encryptedPassword,
+            })
+
+            await newAdmin.save();
+            console.log("Admin creado con éxito")
+        } else {
+            console.log("Ya existe un admin en la base de datos")
+        }
+    } catch (err) {
+        console.error("Error al crear el admin:", err)
     }
 }

@@ -9,18 +9,18 @@ const companySchema = Schema({
 
     impactLevel:{
         type: String,
-        required: [true, "El nivel de impacto es requerido"],
+        required: true,
         maxLength: [70, "No se puede exceder los 70 caracteres"]
     },
 
     yearsOfExperience:{
         type: Number,
-        required: [true, "Los años que la empresa ha estado en el mercado es requerido"],
+        required: true
     },
 
     category:{
         type: String,
-        required: [true, "La categoria de la empresa es requerida"],
+        required: true,
         unique: true
     },
 

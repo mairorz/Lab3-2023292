@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 const clientSchema = Schema({
     name:{
         type: String,
-        required: [true, "El nombre es requerido"],
+        required: true,
         maxLength: [25, "No se puede exceder los 25 caracteres"]
     },
 

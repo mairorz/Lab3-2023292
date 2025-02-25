@@ -54,10 +54,10 @@ const adminSchema = Schema({
     timestamps: true
 })
 
-userSchema.methods.toJSON = function(){
+adminSchema.methods.toJSON = function(){
     const {password, _id, ...admin} = this.toObject()
-    admin.uid = _id
-    return user
+    admin.aid = _id
+    return admin
 }
 
 export default model("Admin", adminSchema)
