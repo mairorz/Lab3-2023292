@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "2f237cb5-87bb-4588-81dc-82df238dc6e0",
+		"name": "Endpoints-2023292",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41830113"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"adminOne\",\r\n    \"password\": \"q1w2E@3004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/auth/loginAdmin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Registrar Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MxZDQ0MzEwZjdkODExMzU4NzdiMDQiLCJpYXQiOjE3NDA4MDUzMDksImV4cCI6MTc0MDgwODkwOX0.Ow3UplldwP7baG1tm9FK_KGzaZHsKnupdP-pbV8af4c"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Smart Devices Co.\",\r\n    \"impactLevel\": \"Medium\",\r\n    \"foundationDate\": \"2016-07-30\",\r\n    \"category\": \"Technology\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/registerCompany"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MxZDQ0MzEwZjdkODExMzU4NzdiMDQiLCJpYXQiOjE3NDA4MDYwMzcsImV4cCI6MTc0MDgwOTYzN30.pOSJCibTt61OMaqzhmgxyoXKRPw_9kWSDjkPx9aEkhU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/listCompanies?categoria=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"GestionESDB-2023292",
+								"v1",
+								"admin",
+								"listCompanies"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MxZDQ0MzEwZjdkODExMzU4NzdiMDQiLCJpYXQiOjE3NDA4MDYwMzcsImV4cCI6MTc0MDgwOTYzN30.pOSJCibTt61OMaqzhmgxyoXKRPw_9kWSDjkPx9aEkhU"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Eco Future Ltd.\",\r\n    \"impactLevel\": \"High\",\r\n    \"foundationDate\": \"2013-05-15\",\r\n    \"category\": \"Sustainability\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/updateCompany/67c29511f78ccb6be2aba935"
+					},
+					"response": []
+				},
+				{
+					"name": "Generar reporte de compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MxZDQ0MzEwZjdkODExMzU4NzdiMDQiLCJpYXQiOjE3NDA3OTgzMjEsImV4cCI6MTc0MDgwMTkyMX0.2mmASJnFbDo6noXRotALNyMHi4qTQ6NC-lrao4085rs"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/generateCompaniesReport"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testing",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testUser\",\r\n    \"password\": \"Test@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/auth/loginAdmin"
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MyOGEzNTE2ZTg4MzVjODQ1M2I1ZTkiLCJpYXQiOjE3NDA4MDI5OTAsImV4cCI6MTc0MDgwNjU5MH0.JVMhOKII-7AWNbIe7LcrH6EMq6j6lNZRlZvjy5CkxPA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"EcoSolutions Ltd.\",\r\n    \"impactLevel\": \"High\",\r\n    \"foundationDate\": \"2010-03-15\",\r\n    \"category\": \"Sustainability\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/registerCompany"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MyOGEzNTE2ZTg4MzVjODQ1M2I1ZTkiLCJpYXQiOjE3NDA4MDI5OTAsImV4cCI6MTc0MDgwNjU5MH0.JVMhOKII-7AWNbIe7LcrH6EMq6j6lNZRlZvjy5CkxPA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/listCompanies?categoria=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"GestionESDB-2023292",
+								"v1",
+								"admin",
+								"listCompanies"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Compañia",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MyOGEzNTE2ZTg4MzVjODQ1M2I1ZTkiLCJpYXQiOjE3NDA4MDI5OTAsImV4cCI6MTc0MDgwNjU5MH0.JVMhOKII-7AWNbIe7LcrH6EMq6j6lNZRlZvjy5CkxPA"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Eco Future Ltd.\",\r\n    \"impactLevel\": \"High\",\r\n    \"foundationDate\": \"2013-05-15\",\r\n    \"category\": \"Sustainability\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/updateCompany/67c1d4c82a6e891c7d537b26"
+					},
+					"response": []
+				},
+				{
+					"name": "Generar reporte de compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2N2MyOGEzNTE2ZTg4MzVjODQ1M2I1ZTkiLCJpYXQiOjE3NDA4MDI5OTAsImV4cCI6MTc0MDgwNjU5MH0.JVMhOKII-7AWNbIe7LcrH6EMq6j6lNZRlZvjy5CkxPA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3000/GestionESDB-2023292/v1/admin/generateCompaniesReport"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

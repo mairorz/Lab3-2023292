@@ -1,0 +1,209 @@
+[{
+  "_id": {
+    "$oid": "67c1d44310f7d81135877b04"
+  },
+  "name": "Fernando Emanuel",
+  "surname": "Morente Lopez",
+  "username": "adminOne",
+  "email": "fmorente@gmail.com",
+  "phone": "45789632",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ACB/1wEOeWKvEcAIRH/dLg$R92+UIwLzcTRJ86rePu+5G38P9gNpHhPKPKEF9TUPQc",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-28T15:20:35.559Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T15:20:35.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29d3c45d993e680a4ae96"
+  },
+  "name": "Usuario",
+  "surname": "De Prueba",
+  "username": "testUser",
+  "email": "testuser@gmail.com",
+  "phone": "12345678",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$T2YvLS52tmktVdZ4sKjOBw$2B7R9XGyjj2KAMirdcbw+5uoIqiqEynjvUdI+BgRx3k",
+  "role": "TEST_USER",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:38:04.771Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:38:04.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0aadd8a20cdc6de23e0"
+  },
+  "name": "María Alejandra",
+  "surname": "Gómez Pérez",
+  "username": "adminTwo",
+  "email": "mgomez@gmail.com",
+  "phone": "12345678",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$x4huDCwi1iPJfT0R5KbG7A$AKbjbaiLB61bcaIA0WpSKaklWkxbu9cCRS3g2ghl1xk",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:42.540Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:42.540Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0aadd8a20cdc6de23e3"
+  },
+  "name": "Carlos Eduardo",
+  "surname": "Ramírez Torres",
+  "username": "adminThree",
+  "email": "cramirez@gmail.com",
+  "phone": "87654321",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$prx6plTwF9cf6B6ghnoDXQ$MbQTqH+ci6K9dHs623lqi3P5PteVFMNT6Q8OR5+pnNI",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:42.673Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:42.673Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0aadd8a20cdc6de23e6"
+  },
+  "name": "Laura Sofía",
+  "surname": "Mendoza Ruiz",
+  "username": "adminFour",
+  "email": "lmendoza@gmail.com",
+  "phone": "11223344",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$9Bkp6M50znVzATVsMOlAkw$hQMLGKvO0RqZjyID4WeLqlbNVi/ygO1veYzZT7JQSek",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:42.795Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:42.795Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0aadd8a20cdc6de23e9"
+  },
+  "name": "Jorge Luis",
+  "surname": "Fernández Castillo",
+  "username": "adminFive",
+  "email": "jfernandez@gmail.com",
+  "phone": "55667788",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$7S8XCLvXG5/5dG3hEZDopg$TI71KfJUeVHCsYDo5LO2Icg2e4LPYiFFOewnQkJR7JE",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:42.931Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:42.931Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0abdd8a20cdc6de23ec"
+  },
+  "name": "Valentina",
+  "surname": "Martínez López",
+  "username": "adminSix",
+  "email": "vmartinez@gmail.com",
+  "phone": "66778899",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$c7zebx1XsND8wunAqHAfAQ$SadYyAfKHlgAX5v/urFDLiS70Osks32MLYt0paG3eNg",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:43.055Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:43.055Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0abdd8a20cdc6de23ef"
+  },
+  "name": "David Sebastián",
+  "surname": "Ortega Vázquez",
+  "username": "adminSeven",
+  "email": "dortega@gmail.com",
+  "phone": "99887766",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$jV6UqJJPWQYg8uD1fwgwIw$C7hC+wjJ/kOljS12hgwBkyPrbd7uJDj/52OtQGs5X7Q",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:43.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:43.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0abdd8a20cdc6de23f2"
+  },
+  "name": "Andrea Paola",
+  "surname": "Hernández Chávez",
+  "username": "adminEight",
+  "email": "ahernandez@gmail.com",
+  "phone": "22334455",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$QYdJ9g8qmAF2b5QOx0yYeQ$k/yzsh18Z9UcOqOlIuXnrLQolo/7TdH5Yys3ly/fdJk",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:43.302Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:43.302Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0abdd8a20cdc6de23f5"
+  },
+  "name": "Ricardo Daniel",
+  "surname": "Pérez Núñez",
+  "username": "adminNine",
+  "email": "rperez@gmail.com",
+  "phone": "33445566",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$IHtZpgxASfRsXamY2O4uxw$aR6RncZj554i2cvVbBTezYCT6wCI8jzORNkFhiCIcnY",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:43.427Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:43.427Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2a0abdd8a20cdc6de23f8"
+  },
+  "name": "Gabriela Fernanda",
+  "surname": "Rojas Díaz",
+  "username": "adminTen",
+  "email": "grojas@gmail.com",
+  "phone": "44556677",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ZPijOEY6TyAC2anAfwDeBw$kT/PwrIffDT+CetmVgeFsia/xXETiVoJDmJM7iwOtUE",
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:52:43.551Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:52:43.551Z"
+  }
+}]

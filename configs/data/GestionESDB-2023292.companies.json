@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "67c29511f78ccb6be2aba935"
+  },
+  "name": "Eco Future Ltd.",
+  "impactLevel": "High",
+  "foundationDate": {
+    "$date": "2013-05-15T00:00:00.000Z"
+  },
+  "category": "Sustainability",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:03:13.217Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:14:19.969Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29eefcfcad43e24b4c026"
+  },
+  "name": "Smart Devices Co.",
+  "impactLevel": "Medium",
+  "foundationDate": {
+    "$date": "2016-07-30T00:00:00.000Z"
+  },
+  "category": "Technology",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:45:19.564Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:45:19.564Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f3ccfcad43e24b4c02a"
+  },
+  "name": "EcoSolutions Ltd.",
+  "impactLevel": "High",
+  "foundationDate": {
+    "$date": "2010-03-15T00:00:00.000Z"
+  },
+  "category": "Sustainability",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:46:36.838Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:46:36.838Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f42cfcad43e24b4c02e"
+  },
+  "name": "Foodie Haven",
+  "impactLevel": "Medium",
+  "foundationDate": {
+    "$date": "2018-09-12T00:00:00.000Z"
+  },
+  "category": "Food & Beverage",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:46:42.641Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:46:42.641Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f47cfcad43e24b4c032"
+  },
+  "name": "FutureTech Innovations",
+  "impactLevel": "High",
+  "foundationDate": {
+    "$date": "2005-06-25T00:00:00.000Z"
+  },
+  "category": "Technology",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:46:47.419Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:46:47.419Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f52cfcad43e24b4c036"
+  },
+  "name": "Green Energy Corp.",
+  "impactLevel": "Low",
+  "foundationDate": {
+    "$date": "2012-04-08T00:00:00.000Z"
+  },
+  "category": "Renewable Energy",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:46:58.699Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:46:58.699Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f57cfcad43e24b4c03a"
+  },
+  "name": "EduSmart Solutions",
+  "impactLevel": "Medium",
+  "foundationDate": {
+    "$date": "2017-11-20T00:00:00.000Z"
+  },
+  "category": "Education",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:47:03.895Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:47:03.895Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f5ecfcad43e24b4c03e"
+  },
+  "name": "NextGen Robotics",
+  "impactLevel": "High",
+  "foundationDate": {
+    "$date": "2015-05-30T00:00:00.000Z"
+  },
+  "category": "Artificial Intelligence",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:47:10.027Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:47:10.027Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f63cfcad43e24b4c042"
+  },
+  "name": "Blue Ocean Traders",
+  "impactLevel": "Low",
+  "foundationDate": {
+    "$date": "2014-02-18T00:00:00.000Z"
+  },
+  "category": "Logistics",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:47:15.560Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:47:15.560Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c29f69cfcad43e24b4c046"
+  },
+  "name": "MediTech Global",
+  "impactLevel": "High",
+  "foundationDate": {
+    "$date": "2009-08-22T00:00:00.000Z"
+  },
+  "category": "Healthcare",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-01T05:47:21.967Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T05:47:21.967Z"
+  }
+}]
