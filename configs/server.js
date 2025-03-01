@@ -7,6 +7,7 @@ import morgan from "morgan"
 import { hash } from "argon2"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
+import adminRoutes from "../src/admin/admin.routes.js"
 import Admin from "../src/admin/admin.model.js"
 
 const middlewares = (app) => {
@@ -19,6 +20,7 @@ const middlewares = (app) => {
 
 const routes = (app) =>{
     app.use("/GestionESDB-2023292/v1/auth", authRoutes)
+    app.use("/GestionESDB-2023292/v1/admin", adminRoutes)
 }
 
 const conectarDB = async () =>{
@@ -38,13 +40,13 @@ export const initServer = () => {
         routes(app)
         app.listen(process.env.PORT)
         console.log(`Server running on port ${process.env.PORT}`)
-        createAdmins()
+        createAdmin()
     }catch(err){
         console.log(`Server init failed: ${err}`)
     }
 }
 
-const createAdmins = async() => {
+export const createAdmin = async() => {
     try {
         const adminExists = await Admin.findOne({ role: "ADMIN" })
         
@@ -60,7 +62,8 @@ const createAdmins = async() => {
                 password: encryptedPassword,
             })
 
-            await newAdmin.save();
+            await Admin.create(newAdmin)
+    
             console.log("Admin creado con éxito")
         } else {
             console.log("Ya existe un admin en la base de datos")
