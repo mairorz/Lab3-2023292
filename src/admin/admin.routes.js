@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { formCompany, getCompanies } from "./admin.controller.js"
-import { formCompanyValidator, listCompaniesValidator } from "../middlewares/admin-validators.js"
+import { formCompany, getCompanies, updateCompany } from "./admin.controller.js"
+import { formCompanyValidator, listCompaniesValidator, updateCompanyValidator } from "../middlewares/admin-validators.js"
 
 const router = Router()
 
@@ -15,6 +15,12 @@ router.get(
     listCompaniesValidator,
     getCompanies
     
+)
+
+router.patch(
+    "/updateCompany/:id", 
+    updateCompanyValidator, 
+    updateCompany
 )
 
 export default router

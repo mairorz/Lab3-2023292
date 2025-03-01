@@ -1,5 +1,5 @@
-import { body } from "express-validator"
-import { nameCompanyExists } from "../helpers/db-validators.js"
+import { body, param } from "express-validator"
+import { nameCompanyExists, companiesExists } from "../helpers/db-validators.js"
 import { validarCampos } from "./validate-fields.js"
 import { deleteFileOnError } from "./delete-file-on-error.js"
 import { handleErrors } from "./handle-errors.js"
@@ -21,4 +21,13 @@ export const formCompanyValidator = [
 export const listCompaniesValidator = [
     validateJWT,
     hasRoles("ADMIN")
+]
+
+export const updateCompanyValidator = [
+    validateJWT,
+    hasRoles("ADMIN"),
+    param("id").isMongoId().withMessage("No es un ID valido de MongoDB"),
+    param("id").custom(companiesExists),
+    validarCampos,
+    handleErrors
 ]

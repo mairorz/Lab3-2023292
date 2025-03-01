@@ -58,3 +58,24 @@ export const getCompanies = async (req, res) => {
         })
     }
 }
+
+export const updateCompany = async (req, res) => {
+    try {
+        const { id } = req.params
+        const { ...data } = req.body
+
+        const updatedCompany = await Company.findByIdAndUpdate(id, data, { new: true })
+
+        return res.status(200).json({
+            success: true,
+            message: "Compañia actualizada correctamente",
+            company: updatedCompany
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error al actualizar la compañia",
+            error: error.message
+        })
+    }
+}
