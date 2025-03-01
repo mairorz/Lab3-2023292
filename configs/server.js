@@ -7,7 +7,6 @@ import morgan from "morgan"
 import { hash } from "argon2"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
-import adminRoutes from "../src/admin/admin.routes.js"
 import Admin from "../src/admin/admin.model.js"
 
 const middlewares = (app) => {
@@ -20,7 +19,6 @@ const middlewares = (app) => {
 
 const routes = (app) =>{
     app.use("/GestionESDB-2023292/v1/auth", authRoutes)
-    app.use("/GestionESDB-2023292/v1/admin", adminRoutes)
 }
 
 const conectarDB = async () =>{
