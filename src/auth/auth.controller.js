@@ -30,7 +30,7 @@ export const loginAdmin = async (req, res) => {
         return res.status(200).json({
             message: "Se logeo de manera exitosa",
             information: {
-                admin: admin.username,
+                user: admin.username,
                 token: token
             }
         })

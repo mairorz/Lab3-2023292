@@ -41,6 +41,7 @@ export const initServer = () => {
         app.listen(process.env.PORT)
         console.log(`Server running on port ${process.env.PORT}`)
         createAdmin()
+        createUserTest()
     }catch(err){
         console.log(`Server init failed: ${err}`)
     }
@@ -70,5 +71,35 @@ export const createAdmin = async() => {
         }
     } catch (err) {
         console.error("Error al crear el admin:", err)
+    }
+}
+
+export const createUserTest = async() => {
+    try {
+        const userExists = await Admin.findOne({
+            $or: [{ username: "testUser" }, { email: "testuser@gmail.com" }]
+        })
+
+        if (!userExists) {
+            const encryptedPassword = await hash("Test@1234")
+            
+            const newUser = new Admin({
+                name: "Usuario",
+                surname: "De Prueba",
+                username: "testUser",
+                email: "testuser@gmail.com",
+                phone: "12345678",
+                password: encryptedPassword,
+                role: "TEST_USER"
+            })
+
+            await Admin.create(newUser)
+    
+            console.log("Usuario de prueba creado con éxito")
+        } else {
+            console.log("El usuario de prueba ya existe")
+        }
+    } catch (err) {
+        console.error("Error al crear el usuario de prueba:", err)
     }
 }
